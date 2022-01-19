@@ -152,6 +152,5 @@ function displayCountry(country){
         }
     divContainer.appendChild(displayCard);
     divContainer.style.display = "block"
-    console.log(country);
   });
 }
