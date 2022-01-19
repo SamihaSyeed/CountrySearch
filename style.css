@@ -1,0 +1,150 @@
+body{
+  font-family: Georgia, serif;
+}
+body::after {
+  content: "";
+  background: url("https://wallpaperaccess.com/full/553935.jpg");
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+ margin:0 auto;
+ width:max-content;
+ font-family: 'Brush Script MT', cursive;
+ font-size:40px
+}
+.search-div{
+  margin:5 auto;
+  width: 50%;
+  height: 40px;
+
+}
+.search-bar{
+  width:90%;
+  height: 100%;
+  border: 1px solid black;
+  padding-left: 10px;
+  outline:none;
+  border-right:none;
+  font-size: 17px;
+  color:#313233;
+  border-color:#313233;
+  background-color:#E8E7E7
+}
+.search-btn{
+  border:1px solid black;
+  width:10%;
+  height:100%;
+  margin-left:-4px;
+  background-color:#E8E7E7;
+  border-left: none;
+  box-shadow: none;
+  font-size:14px
+}
+img{
+  width : 60px;
+  height : 80%;
+  margin:auto 5;
+}
+.map-div{
+  margin:0 auto;
+  background-color: grey;
+  text-align:right;
+  height:200px;
+  width:500px;
+}
+.gmap_canvas{
+  overflow:hidden;
+  background:none!important;
+  height:100%;
+  width:100%;
+}
+.container{
+  position:relative;
+  margin:59 auto 0 auto;
+  width:max-content;
+  height:max-content;
+  text-align: center;
+  border: 1px solid black;
+  display:none;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.country-info{
+  background-color:none;
+  width:500px;
+  margin:0 auto;
+  height:16.8%;
+  font-size:100%;
+  line-height: 45px;
+  margin-top:-10px
+}
+.header{
+  display:flex;
+  justify-content: center;
+  border:none;
+  border-radius:10px;
+  height:50px;
+  width:85%;
+  margin:5 auto;
+  background-color: grey;
+  line-height: 50px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  padding:0 5px;
+  font-size:20px
+
+}
+.currency-info{
+  background-color: none;
+  width: 500px;
+  margin: 0 auto;
+  height:30%;
+  font-size: 100%;
+  line-height: 40px;
+  margin-bottom:2px
+
+}
+.autocomplete-active {
+  background-color: rgba(25, 20, 20, 0.8) !important;
+  color: #ffffff;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(140, 135, 135, 0.8);
+  border:1px solid #313233;
+  border-top:none;
+  font-family: sans-serif;
+
+
+}
+.label{
+  text-align:left;
+  background-color: grey;
+  width:40%;
+  height:45px;
+  border-right:1px solid black;
+  padding-left:10px;
+  margin:3px;
+  box-shadow:1px 2px 4px black
+}
+.div-label{
+  display:flex;
+  justify-content: space-between;
+}
+.info{
+  background-color: silver;
+  width:60%;
+  text-align: left;
+  padding-left: 10px;
+  border-bottom:1px solid black;
+  margin:5px
+}
