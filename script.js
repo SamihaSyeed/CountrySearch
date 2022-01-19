@@ -145,9 +145,9 @@ function displayCountry(country){
     `
   }else{
     displayCard.innerHTML += `
-    <div id = "currencies" class="currency-info"><div>  Currency:</div>
-     <div> none </div>
-     </div> </div>
+    <div id = "currencies" class="currency-info div-label">
+    <span class="label"> Currency </span>
+    <span class="info">none</span>
       `
         }
     divContainer.appendChild(displayCard);
