@@ -1,3 +1,7 @@
+html{
+  overflow : visible;
+  height:100%
+}
 body{
   font-family: Georgia, serif;
 }
@@ -19,13 +23,14 @@ h1{
  margin:0 auto;
  width:max-content;
  font-family: 'Brush Script MT', cursive;
- font-size:40px
+ font-size:40px;
+ margin-top:-10px;
+ margin-bottom: -4px
 }
 .search-div{
-  margin:5 auto;
+  margin:0 auto;
   width: 50%;
   height: 40px;
-
 }
 .search-bar{
   width:90%;
@@ -37,7 +42,7 @@ h1{
   font-size: 17px;
   color:#313233;
   border-color:#313233;
-  background-color:#E8E7E7
+  background-color:#E8E7E7;
 }
 .search-btn{
   border:1px solid black;
@@ -69,7 +74,7 @@ img{
 }
 .container{
   position:relative;
-  margin:59 auto 0 auto;
+  margin:0 auto;
   width:max-content;
   height:max-content;
   text-align: center;
@@ -123,7 +128,7 @@ img{
   border:1px solid #313233;
   border-top:none;
   font-family: sans-serif;
-
+  position: relative;
 
 }
 .label{
@@ -147,4 +152,50 @@ img{
   padding-left: 10px;
   border-bottom:1px solid black;
   margin:5px
+}
+.country-list{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height:500px
+}
+.buttons{
+  background-color: silver;
+  width:max-content;
+  position:fixed;
+  top:15;
+  display: flex;
+}
+.country-list{
+  width:90%;
+  margin:55 auto 0 auto;
+  font-size:16px;
+
+}
+li{
+  list-style: none;
+  background-color: rgba(211, 211, 211, 0.6);
+  border: 1px solid black;
+  margin:2px;
+  padding:2px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer
+}
+a{
+  text-decoration: none;
+  color:black
+}
+@media (max-width:900px) {
+
+  .country-list{
+    font-size: 13px;
+    margin:55 auto 0 auto;
+    padding-left:10px;
+    padding-right:5px;
+    height:440px
+  }
+  li{
+    font-weight:bolder;
+  }
 }

@@ -2,14 +2,35 @@ const searchDiv = document.querySelector(".search-div")
 const searchBar = document.querySelector(".search-bar");
 const searchBtn = document.querySelector(".search-btn");
 const divContainer = document.querySelector(".container");
-
+const countryList = document.querySelector(".country-list");
+const listBtn = document.querySelector(".buttons")
 const countries = [];
 fetch(`https://restcountries.com/v2/all`)
   .then(response => response.json())
-  .then(data => { data.forEach(country => { countries.push(country.name)}) })
+  .then(data => { data.forEach(country => {
+    countries.push(country.name)
+  })  } )
+
+function displayCountryList(start, end){
+  countryList.innerHTML=""
+  divContainer.innerHTML=""
+  fetch(`https://restcountries.com/v2/all`)
+    .then(response => response.json())
+    .then(data => { for(let i =start; i<end; i++){
+      countryList.innerHTML+=`
+        <div><li>${data[i].name}</li></div>
+      `
+    }
+  })
+}
+
+displayCountryList(0,51)
+
+
 
 //fetch data and display when search button clicked
 searchBtn.addEventListener("click", () => {
+  countryList.innerHTML=""
   divContainer.textContent = ""
   searchDiv.style = "margin:5 auto"
   fetch(`https://restcountries.com/v2/name/${searchBar.value}?fullText=true`)
