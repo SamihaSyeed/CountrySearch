@@ -1,6 +1,6 @@
 # CountrySearch
 A website that provides information about all the countries in the world.
-Created this as an assignment for an internship interview and I am so glad to have take up the challenge
+Created this as an assignment for an internship interview and I am so glad to have taken up this challenge
 I got to learn so many new concepts and it was so much fun working on the website.
 
 sites referred to:
@@ -12,3 +12,5 @@ sites referred to:
  embedded google maps location for each country with 
   https://freemapgenerator.site/
   (google maps now requre billing to embed a working map to personal websites so had to look for different options)
+ api reference 
+  https://restcountries.com/
