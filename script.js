@@ -4,6 +4,7 @@ const searchBtn = document.querySelector(".search-btn");
 const divContainer = document.querySelector(".container");
 const countryList = document.querySelector(".country-list");
 const listBtn = document.querySelector(".buttons")
+
 const countries = [];
 fetch(`https://restcountries.com/v2/all`)
   .then(response => response.json())
@@ -11,28 +12,32 @@ fetch(`https://restcountries.com/v2/all`)
     countries.push(country.name)
   })  } )
 
+//display countries in a list
 function displayCountryList(start, end){
+  countryList.style.display = "flex"
   countryList.innerHTML=""
   divContainer.innerHTML=""
   fetch(`https://restcountries.com/v2/all`)
     .then(response => response.json())
     .then(data => { for(let i =start; i<end; i++){
-      countryList.innerHTML+=`
-        <div><li>${data[i].name}</li></div>
-      `
-    }
+      let list = document.createElement("li");
+      list.textContent = data[i].name;
+      list.addEventListener("click", ()=>{
+        countryList.style.display = "none"
+        fetch(`https://restcountries.com/v2/name/${data[i].name}?fullText=true`)
+          .then(response => response.json())
+          .then(result => displayCountry(result))
+      })
+      countryList.appendChild(list)
+      }
   })
 }
-
 displayCountryList(0,51)
-
-
 
 //fetch data and display when search button clicked
 searchBtn.addEventListener("click", () => {
-  countryList.innerHTML=""
+  countryList.style.display="none"
   divContainer.textContent = ""
-  searchDiv.style = "margin:5 auto"
   fetch(`https://restcountries.com/v2/name/${searchBar.value}?fullText=true`)
     .then(response => response.json())
     .then(result => displayCountry(result))
@@ -48,7 +53,6 @@ searchBar.addEventListener("keypress", (e) => {
 function autocomplete(inp, arr) {
   var currentFocus;
   inp.addEventListener("input", function(e) {
-      divContainer.style.display="none"
       var a, b, i, val = this.value;
       closeAllLists();
       if (!val) { return false;}

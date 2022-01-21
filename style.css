@@ -73,8 +73,7 @@ img{
   width:100%;
 }
 .container{
-  position:relative;
-  margin:0 auto;
+  margin:50 auto;
   width:max-content;
   height:max-content;
   text-align: center;
@@ -182,9 +181,8 @@ li{
   font-weight: bold;
   cursor: pointer
 }
-a{
-  text-decoration: none;
-  color:black
+li:hover{
+  background-color: grey;
 }
 @media (max-width:900px) {
 
